@@ -7,10 +7,12 @@ const hamburgerMenu = document.querySelector('.hamburger-menu');
 console.log('hamburger----->', hamburgerMenu);
 
 btnHamburgerOpen.addEventListener("click", function(){
-  hamburgerMenu.style.display = "block";
+  const domHamburgerMenu = document.querySelector('.hamburger-menu');
+  domHamburgerMenu.classList.add('active');
 });
 
-
 btnHamburgerClose.addEventListener("click", function(){
-  hamburgerMenu.style.display = "none";
-})
+  const domHamburgerMenu = document.querySelector('.hamburger-menu');
+  domHamburgerMenu.classList.remove('active');
+});
+
